@@ -74,12 +74,8 @@ namespace RazorEnhanced
 				shards.Columns.Add("Selected", typeof(bool));
 
 				DataRow uod = shards.NewRow();
-				uod.ItemArray = new object[] { "OSI Ultima Online", String.Empty, String.Empty, String.Empty, "login.ultimaonline.com", 7776, true, true, true };
-				shards.Rows.Add(uod);
-
-                DataRow eventine = shards.NewRow();
-                eventine.ItemArray = new object[] { "UO Eventine", String.Empty, String.Empty, String.Empty, "shard.uoeventine.com", 2593, true, false, false };
-                shards.Rows.Add(eventine);
+				uod.ItemArray = new object[] { "UO Forever", String.Empty, String.Empty, String.Empty, "play.uoforever.com", 2599, true, false, false };
+				shards.Rows.Add(uof);
 
                 m_Dataset.Tables.Add(shards);
 
