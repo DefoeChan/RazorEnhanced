@@ -9654,30 +9654,30 @@ namespace Assistant
 
         public void UpdateControlLocks()
         {
-            if (!Assistant.Client.Instance.AllowBit(FeatureBit.AutolootAgent))
-            {
-                autoLootCheckBox.Enabled = false;
-                autoLootCheckBox.Checked = false;
-                if (RazorEnhanced.AutoLoot.Status())
-                    RazorEnhanced.AutoLoot.Stop();
-            }
-            else
-            {
-                if (!autoLootCheckBox.Enabled)
-                    autoLootCheckBox.Enabled = true;
-            }
+            //if (!Assistant.Client.Instance.AllowBit(FeatureBit.AutolootAgent))
+            //{
+            //    autoLootCheckBox.Enabled = false;
+            //    autoLootCheckBox.Checked = false;
+            //    if (RazorEnhanced.AutoLoot.Status())
+            //        RazorEnhanced.AutoLoot.Stop();
+            //}
+            //else
+            //{
+            //    if (!autoLootCheckBox.Enabled)
+            //        autoLootCheckBox.Enabled = true;
+            //}
 
-            if (!Assistant.Client.Instance.AllowBit(FeatureBit.RangeCheckLT))
-            {
-                rangeCheckLT.Checked = false;
-                rangeCheckLT.Enabled = false;
-                Settings.General.WriteBoolNoSave("RangeCheckLT", false);
-            }
-            else
-            {
-                if (!rangeCheckLT.Enabled)
-                    rangeCheckLT.Enabled = true;
-            }
+            //if (!Assistant.Client.Instance.AllowBit(FeatureBit.RangeCheckLT))
+            //{
+            //    rangeCheckLT.Checked = false;
+            //    rangeCheckLT.Enabled = false;
+            //    Settings.General.WriteBoolNoSave("RangeCheckLT", false);
+            //}
+            //else
+            //{
+            //    if (!rangeCheckLT.Enabled)
+            //        rangeCheckLT.Enabled = true;
+            //}
 
 
             /*	if (Client.AllowBit(FeatureBit.AutoOpenDoors))
@@ -9696,41 +9696,41 @@ namespace Assistant
 				}*/
 
 
-            if (!Assistant.Client.Instance.AllowBit(FeatureBit.UnequipBeforeCast))
-            {
-                spellUnequip.Checked = false;
-                spellUnequip.Enabled = false;
-                Settings.General.WriteBoolNoSave("SpellUnequip", false);
-            }
-            else
-            {
-                if (!spellUnequip.Enabled)
-                    spellUnequip.Enabled = true;
-            }
+            //if (!Assistant.Client.Instance.AllowBit(FeatureBit.UnequipBeforeCast))
+            //{
+            //    spellUnequip.Checked = false;
+            //    spellUnequip.Enabled = false;
+            //    Settings.General.WriteBoolNoSave("SpellUnequip", false);
+            //}
+            //else
+            //{
+            //    if (!spellUnequip.Enabled)
+            //        spellUnequip.Enabled = true;
+            //}
 
-            if (!Assistant.Client.Instance.AllowBit(FeatureBit.AutoPotionEquip))
-            {
-                potionEquip.Checked = false;
-                potionEquip.Enabled = false;
-                Settings.General.WriteBoolNoSave("PotionEquip", false);
-            }
-            else
-            {
-                if (!potionEquip.Enabled)
-                    potionEquip.Enabled = true;
-            }
+            //if (!Assistant.Client.Instance.AllowBit(FeatureBit.AutoPotionEquip))
+            //{
+            //    potionEquip.Checked = false;
+            //    potionEquip.Enabled = false;
+            //    Settings.General.WriteBoolNoSave("PotionEquip", false);
+            //}
+            //else
+            //{
+            //    if (!potionEquip.Enabled)
+            //        potionEquip.Enabled = true;
+            //}
 
-            if (!Assistant.Client.Instance.AllowBit(FeatureBit.BlockHealPoisoned))
-            {
-                blockhealpoisonCheckBox.Checked = false;
-                blockhealpoisonCheckBox.Enabled = false;
-                Settings.General.WriteBoolNoSave("BlockHealPoison", false);
-            }
-            else
-            {
-                if (!blockhealpoisonCheckBox.Enabled)
-                    blockhealpoisonCheckBox.Enabled = true;
-            }
+            //if (!Assistant.Client.Instance.AllowBit(FeatureBit.BlockHealPoisoned))
+            //{
+            //    blockhealpoisonCheckBox.Checked = false;
+            //    blockhealpoisonCheckBox.Enabled = false;
+            //    Settings.General.WriteBoolNoSave("BlockHealPoison", false);
+            //}
+            //else
+            //{
+            //    if (!blockhealpoisonCheckBox.Enabled)
+            //        blockhealpoisonCheckBox.Enabled = true;
+            //}
 
             /*	if (!Client.AllowBit(FeatureBit.SellAgent))
 				{
@@ -9755,55 +9755,55 @@ namespace Assistant
 					buyEnableCheckBox.Enabled = true;
 			}*/
 
-            if (!Assistant.Client.Instance.AllowBit(FeatureBit.OverheadHealth))
-            {
-                chkPartyOverhead.Checked = false;
-                chkPartyOverhead.Enabled = false;
-                Settings.General.WriteBoolNoSave("ShowPartyStats", false);
-            }
-            else
-            {
-                if (!chkPartyOverhead.Enabled)
-                    chkPartyOverhead.Enabled = true;
-            }
+            //if (!Assistant.Client.Instance.AllowBit(FeatureBit.OverheadHealth))
+            //{
+            //    chkPartyOverhead.Checked = false;
+            //    chkPartyOverhead.Enabled = false;
+            //    Settings.General.WriteBoolNoSave("ShowPartyStats", false);
+            //}
+            //else
+            //{
+            //    if (!chkPartyOverhead.Enabled)
+            //        chkPartyOverhead.Enabled = true;
+            //}
 
-            if (!Assistant.Client.Instance.AllowBit(FeatureBit.BoneCutterAgent))
-            {
-                bonecutterCheckBox.Checked = false;
-                bonecutterCheckBox.Enabled = false;
-                Settings.General.WriteBoolNoSave("BoneCutterCheckBox", false);
-            }
-            else
-            {
-                if (!bonecutterCheckBox.Enabled)
-                    bonecutterCheckBox.Enabled = true;
-            }
+            //if (!Assistant.Client.Instance.AllowBit(FeatureBit.BoneCutterAgent))
+            //{
+            //    bonecutterCheckBox.Checked = false;
+            //    bonecutterCheckBox.Enabled = false;
+            //    Settings.General.WriteBoolNoSave("BoneCutterCheckBox", false);
+            //}
+            //else
+            //{
+            //    if (!bonecutterCheckBox.Enabled)
+            //        bonecutterCheckBox.Enabled = true;
+            //}
 
-            if (!Assistant.Client.Instance.AllowBit(FeatureBit.AutoRemount))
-            {
-                remountcheckbox.Checked = false;
-                remountcheckbox.Enabled = false;
-                Settings.General.WriteBoolNoSave("RemountCheckbox", false);
-            }
-            else
-            {
-                if (!remountcheckbox.Enabled)
-                    remountcheckbox.Enabled = true;
-            }
+            //if (!Assistant.Client.Instance.AllowBit(FeatureBit.AutoRemount))
+            //{
+            //    remountcheckbox.Checked = false;
+            //    remountcheckbox.Enabled = false;
+            //    Settings.General.WriteBoolNoSave("RemountCheckbox", false);
+            //}
+            //else
+            //{
+            //    if (!remountcheckbox.Enabled)
+            //        remountcheckbox.Enabled = true;
+            //}
 
 
-            if (!Assistant.Client.Instance.AllowBit(FeatureBit.AutoBandage))
-            {
-                bandagehealenableCheckBox.Enabled = false;
-                bandagehealenableCheckBox.Checked = false;
-                if (RazorEnhanced.BandageHeal.Status())
-                    RazorEnhanced.BandageHeal.Stop();
-            }
-            else
-            {
-                if (!bandagehealenableCheckBox.Enabled)
-                    bandagehealenableCheckBox.Enabled = true;
-            }
+            //if (!Assistant.Client.Instance.AllowBit(FeatureBit.AutoBandage))
+            //{
+            //    bandagehealenableCheckBox.Enabled = false;
+            //    bandagehealenableCheckBox.Checked = false;
+            //    if (RazorEnhanced.BandageHeal.Status())
+            //        RazorEnhanced.BandageHeal.Stop();
+            //}
+            //else
+            //{
+            //    if (!bandagehealenableCheckBox.Enabled)
+            //        bandagehealenableCheckBox.Enabled = true;
+            //}
 
         }
         // ----------------- FEATURE END -------------------
