@@ -73,8 +73,8 @@ namespace RazorEnhanced
 				shards.Columns.Add("OSIEnc", typeof(bool));
 				shards.Columns.Add("Selected", typeof(bool));
 
-				DataRow uod = shards.NewRow();
-				uod.ItemArray = new object[] { "UO Forever", String.Empty, String.Empty, String.Empty, "play.uoforever.com", 2599, true, false, false };
+				DataRow uof = shards.NewRow();
+				uof.ItemArray = new object[] { "UO Forever", String.Empty, String.Empty, String.Empty, "play.uoforever.com", 2599, true, false, false };
 				shards.Rows.Add(uof);
 
                 m_Dataset.Tables.Add(shards);
