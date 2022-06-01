@@ -10,6 +10,7 @@ using System.Drawing;
 using static RazorEnhanced.HotKey;
 using System.Windows.Forms;
 using System.IO;
+using System.Reflection;
 
 namespace RazorEnhanced
 {
@@ -54,6 +55,40 @@ namespace RazorEnhanced
                 }
             }
             RazorEnhanced.UoWarper.UODLLHandleClass.CloseBackpack();
+        }
+        /// <summary>
+        /// @nodoc
+        /// </summary>
+        public static void TestMap()
+        {
+            if (!Client.IsOSI)
+            {
+                var getAllGumps = ClassicUOClient.CUOAssembly?.GetType("ClassicUO.Game.Managers.UIManager")?.GetProperty("Gumps", BindingFlags.Public | BindingFlags.Static);
+                if (getAllGumps != null)
+                {
+                    var listOfGumps = getAllGumps.GetValue(null);
+                    if (listOfGumps != null)
+                    {
+                        IEnumerable<Object> temp = listOfGumps as IEnumerable<Object>;
+                        foreach (var gump in temp)
+                        {
+                            if (gump != null)
+                            {
+                                var GumpType = ClassicUOClient.CUOAssembly?.GetType("ClassicUO.Game.UI.Gumps.Gump")?.GetProperty("GumpType", BindingFlags.Public);
+
+                                var something = GumpType.GetValue(gump);
+                                //if (gump.GumpType == 18)
+                                //{ }
+                            }
+                        }
+                        //PropertyInfo ProfileClass = ClassicUOClient.CUOAssembly?.GetType("ClassicUO.Configuration.Profile")?.GetProperty("AutoOpenDoors", BindingFlags.Public | BindingFlags.Instance);
+                        //if (ProfileClass != null)
+                        //{
+                        //    ProfileClass.SetValue(profile, true, null);
+                        //}
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -118,6 +153,30 @@ namespace RazorEnhanced
             Point p = RazorEnhanced.UoWarper.UODLLHandleClass.GetContPos();
 
             return p;
+        }
+
+        // IsItem 
+        /// <summary>
+        /// Determine if the serial is an item
+        /// </summary>
+        /// <param name="serial"> Serial number of object to test is Item</param>
+        /// <returns>Return True - is an Item False - is not an item</returns>
+        public static bool IsItem(System.UInt32  serial)
+        {
+            Assistant.Serial anObject = new Assistant.Serial(serial);
+            return anObject.IsItem;
+        }
+
+        // IsMobile
+        /// <summary>
+        /// Determine if the serial is a mobile
+        /// </summary>
+        /// <param name="serial"> Serial number of object to test is Mobile</param>
+        /// <returns>Return True - is a mobile False - is not a mobile</returns>
+        public static bool IsMobile(System.UInt32 serial)
+        {
+            Assistant.Serial anObject = new Assistant.Serial(serial);
+            return anObject.IsMobile;
         }
 
         //Change Profile
